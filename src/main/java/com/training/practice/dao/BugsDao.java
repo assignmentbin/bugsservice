@@ -7,7 +7,7 @@ import java.util.List;
 
 public class BugsDao {
 
-    private BugsStore store = new BugsStore();
+    private BugsStore store = BugsStore.getInstance();
 
 
     public int addBug(Bug bug){

@@ -11,6 +11,13 @@ public class BugsStore {
     private List<Bug> bugs = new ArrayList<>();
     private int count = 0;
 
+    public static BugsStore getInstance(){
+        BugsStore store = new BugsStore();
+        Bug bug = new Bug("my furst bug","first bug in the store");
+        store.add(bug);
+        return store;
+    }
+
     public int add(Bug bug){
         bug.setStatus(Status.BACKLOG);
         bug.setBugId(count++);
